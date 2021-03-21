@@ -14,7 +14,15 @@ const randomizeData = (tech: any): DataPoint => ({
   interest: randomNum(),
 });
 
-const techList = [
+export const roles = [
+  { _id: "1", role: "Software Development Engineer" },
+  { _id: "2", role: "Data Visualization",},
+  { _id: "3", role: "Project Manager",},
+  { _id: "4", role: "Data Scientist",},
+  { _id: "5", role: "Intern"},
+];
+
+export const techList = [
   { tag: "Assembly",     type: "language" },
   { tag: "AWS",          type: "tool" },
   { tag: "Azure",        type: "tool" },

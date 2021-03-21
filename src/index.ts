@@ -1,7 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
-import {dummyPersons} from './dummydata';
+import {dummyPersons, roles, techList} from './dummydata';
 const app = express();
 
 mongoose.connect('mongodb://localhost:27017/skills', {
@@ -16,5 +16,11 @@ app
   })
   .get('/api/person', (req, res) => {
     res.json(dummyPersons());
+  })
+  .get('/api/tech', (req, res) => {
+    res.json(techList);
+  })
+  .get('/api/roles', (req, res) => {
+    res.json(roles);
   })
   .listen(5000, () => console.log('listening on port 5000'));
