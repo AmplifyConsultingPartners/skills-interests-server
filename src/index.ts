@@ -14,6 +14,9 @@ app
   .get('/', (req, res) => {
     res.json("connected")
   })
+  .get('/api/me', (req, res) => {
+    res.json(dummyPersons()[0]);
+  })
   .get('/api/person', (req, res) => {
     res.json(dummyPersons());
   })

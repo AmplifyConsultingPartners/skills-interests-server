@@ -3,6 +3,7 @@ export type DataPoint = {
   skill: number;
   tag: string;
   type: string;
+  fill: string;
 }
 
 export type Person = {
